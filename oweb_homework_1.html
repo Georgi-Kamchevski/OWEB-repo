@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Georgi Kamchevski 186/2017">
+    <title>Основи на WEB прорамирање - Домашна задача #1</title>
+</head>
+
+<body>
+    <table border="true">
+        <form id="form">
+            <!--Прв ред-->
+            <tr>
+                <th colspan="2">
+                    Pizza Shop 2.0
+                </th>
+            </tr>
+            <!--Втор ред-->
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" name="name">
+                </td>
+            </tr>
+            <!--Трет ред-->
+            <tr>
+                <td>Pizza Topping</td>
+                <td>
+                    <label><input type="radio" name="topping" value="Supreme">Supreme</label><br>
+                    <label><input type="radio" name="topping" value="Vegeterian">Vegeterian</label><br>
+                    <label><input type="radio" name="topping" value="Hawaiian">Hawaiian</label><br>
+                </td>
+            </tr>
+            <!--Четврти ред-->
+            <tr>
+                <td><label for="sauce">Pizza Sauce</label></td>
+                <td>
+                    <select name="sauce" id="sauce">
+                        <option value="Tomato">Tomato</option>
+                        <option value="Pesto">Pesto</option>
+                        <option value="White">White</option>
+                    </select>
+                </td>
+            </tr>
+
+            <!--Петти ред-->
+            <tr>
+                <td>Optional Extras</td>
+                <td>
+                    <label><input type="checkbox" name="extras" value="Extra Cheese">Extra Cheese</label>
+                    <label><input type="checkbox" name="extras" value="Gluten Free Base">Gluten Free Base</label>
+                </td>
+            </tr>
+            <!--Шести ред-->
+            <tr>
+                <td colspan="2">
+                    <label>Delivery Instructions: </label><br>
+                    <textarea name="instructions" cols="50" rows="4" form="form"></textarea>
+                </td>
+            </tr>
+            <!--Седми ред-->
+            <tr>
+                <td colspan="2">
+                    <label><input type="submit" value="Send my Order"></label>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>
