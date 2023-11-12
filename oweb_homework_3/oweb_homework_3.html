@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Georgi Kamchevski 186/2017">
+
+    <link rel="stylesheet" type="text/css" href="./oweb_homework_3.css">
+    <script language="JavaScript" src="./oweb_homework_3.js"></script>
+
+    <title>Основи на WEB програмирање - Домашна задача #3</title>
+</head>
+
+<body onload="init()">
+    <div class="title">
+        <span>Интерактивна игра во JavaScript - Погоди го зборот</span>
+    </div>
+
+    <div class="begin">
+        <div class="rules">
+            <h2>Правила на игра:</h2>
+            <p>
+                &bull;&nbsp;Има 20 збора од 8 букви во множеството.<br>
+                &bull;&nbsp;Даден е дел од еден од зборовите, а <u><strong>целта на играта е да се погоди
+                        зборот буква по буква во
+                        најмногу 5 потези</strong></u>.<br>
+                &bull;&nbsp;При еден потег погодувате една буква, доколку ја има во зборот, истата се открива на местото
+                каде
+                припаѓа.<br>
+                &bull;&nbsp;Доколку буквата ја нема во зборот, губите "живот" или потег.<br>
+                &bull;&nbsp;Ако ги изгубите сите животи, ја губите играта.<br>
+                &bull;&nbsp;Ако ги погодите сите букви, ја победувате играта.<br>
+                &bull;&nbsp;(Само за Временски предизвик) Имате 30 секунди да го погодите зборот, ако ви истече времето
+                пред тоа, ја губите играта<br>
+            </p>
+        </div>
+        <div id="gametype-start">
+            <h2>Избери го типот на игра</h2>
+            <label><input id="classic" type="radio" name="mode" checked>Класична игра</label>
+            <label><input id="timed" type="radio" name="mode" disabled>Временски предизвик(WIP)</label>
+            <input type="button" id="start" name="start" value="Започни ја играта">
+        </div>
+        <div id="timer">
+            <h2>Преостанато време:</h2>
+            <span id="time">--</span>
+        </div>
+    </div>
+    <div class="game">
+        <div class="word-table">
+            <table>
+                <tr>
+                    <th>
+                        Збор:&nbsp;&nbsp;&nbsp;
+                    </th>
+
+                    <td id="cell-0">_</td>
+                    <td id="cell-1">_</td>
+                    <td id="cell-2">_</td>
+                    <td id="cell-3">_</td>
+                    <td id="cell-4">_</td>
+                    <td id="cell-5">_</td>
+                    <td id="cell-6">_</td>
+                    <td id="cell-7">_</td>
+                </tr>
+            </table>
+        </div>
+        <div class="guess" id="guess">
+            <label>Внеси буква за погодување (стисни Enter за потврда): <input type="text" id="guess-input"></label>
+        </div>
+        <div id="newgame">
+            <input type="button" id="newgame" name="newgame" value="Нова игра?">
+        </div>
+        <div class="guessed">
+            <!--Guesses-->
+            <div>
+                <span>Преостанати обиди:</span><span id="tries-left">5</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

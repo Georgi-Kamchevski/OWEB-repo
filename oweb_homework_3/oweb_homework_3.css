@@ -1,0 +1,94 @@
+.title {
+    text-align: center;
+    font-size: 3em;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.begin {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.rules {
+    padding: 15px;
+    font-size: 1em;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+#gametype-start {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+}
+
+#start {
+    margin-top: 16px;
+}
+
+#timer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 15px;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+#time {
+    font-size: 5em;
+    text-align: center;
+}
+
+.game {
+    border: 1px solid black;
+    margin-top: 1em;
+}
+
+.word-table {
+    margin-top: 1em;
+    padding: 1em;
+    font-size: 3em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.word-table td {
+    border: 3px solid peachpuff;
+}
+
+.guess {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.guessed {
+    display: flex;
+    /*border: 2px solid green;*/
+    padding: 1em;
+
+}
+
+.guessed div {
+    width: 40%;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+#newgame {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
