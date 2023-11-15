@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дома - Проектна задача #1</title>
+
+    <link rel="stylesheet" type="text/css" href="./oweb_project_1.css">
+</head>
+
+<body>
+
+    <div id="navbar">
+        <div id="logo"><img alt="logo" src="./images/logo_cat.png" width="150" height="100">
+            <h1>Mach.com</h1>
+        </div>
+
+        <ul id="links">
+            <li><a href="home.html">Home</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <a href="./products_1.html">Cat Toys</a>
+                    <a href="./products_2.html">Cat Food</a>
+                    <a href="./products_3.html">Vouchers and Other</a>
+                </div>
+            </li>
+            <li><a href="survey.html">Survey</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div id="login">
+            <form id="login-form">
+                <label><b>E-mail:</b> <input type="text"></label>
+                <label><b>Password:</b> <input type="password"></label>
+                <label><a href="#">Forgot password?</a>
+                    <input type="button" value="Login"></label>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="contact">
+
+        <div id="contact-info">
+            <span class="contact-title">Contact Info</span>
+            <address>Address: Mach.com, ulica Machka, 1000 Skopje</address>
+            <span>Facebook:</span> <a href="http://facebook.com/mach.com">facebook.com/mach.com</a><br>
+            <span>Instagram:</span> <a href="http://instagram.com/mach_com">instagram.com/mach_com</a><br>
+            <span>E-mail:</span> <a>mach.com@mach.com</a>
+        </div>
+
+        <div id="contact-form">
+            <span class="form-title"><b>Have a question or request?<br>Fill in the form so we can get to it
+                    faster!</b></span>
+            <form>
+
+                <label>Full Name <input type="text" name="full-name"></label>
+                <label>E-mail <input type="email" name="email"></label>
+
+                <label>Type of Inquiry</label>
+                <select id="inquiry" name="inquiry">
+                    <option value="request">Request</option>
+                    <option value="question">Question</option>
+                    <option value="usa">Note</option>
+                </select>
+
+                <label>Message</label>
+                <textarea id="message" name="message"></textarea>
+
+                <input type="submit" value="Send">
+
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            <h3>Want to help improve our services?</h3>
+            <a href="survey.html">Take a survey</a>
+        </div>
+        <div>
+            <span><b>&copy Georgi Kamchevski 186/2017</b></span>
+        </div>
+        <div>
+            <h3>Need to contact us?</h3>
+            <a href="contact.html">Contact info</a>
+        </div>
+    </div>
+</body>
+
+</html>

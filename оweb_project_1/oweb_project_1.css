@@ -1,0 +1,358 @@
+html,
+body {
+    font-family: sans-serif;
+    width: 100%;
+    padding: 0;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: goldenrod;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    width: 20%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: gold;
+    color: black !important;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: goldenrod;
+}
+
+
+
+
+
+
+
+
+
+
+#links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+    width: 30%;
+    border: 1px solid black;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+#links li {
+    display: block;
+    list-style-type: none;
+    margin: 10px;
+}
+
+#links li:hover {
+    color: goldenrod;
+
+}
+
+#links li a {
+
+    text-decoration: none;
+    color: black;
+}
+
+#links li:hover a {
+    text-decoration: none;
+    color: goldenrod;
+}
+
+#login form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: flex-end;
+    border: 1px solid black;
+    background-color: white;
+    margin-right: 20px;
+}
+
+#login-form label {
+    margin-bottom: 10px;
+}
+
+#home-content {
+    padding: 50px;
+    background-color: gold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#products-1,
+#products-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: goldenrod;
+    width: 70%;
+    margin: 50px;
+}
+
+#products-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: goldenrod;
+    width: 70%;
+}
+
+.product-image img {
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+}
+
+.product-description {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 20px;
+}
+
+.product-text {
+    padding: 10px;
+}
+
+.product-link {
+    width: 30%;
+    height: 50px;
+    font-size: 40px;
+    align-items: center;
+    text-align: center;
+    background-color: gold;
+    border: 0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.product-link:hover {
+    background-color: white;
+    width: 35%;
+    height: 60px;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    background-color: goldenrod;
+
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+#footer div {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#footer a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+#contact,
+#survey {
+    padding: 50px;
+    background-color: gold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.contact-title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.form-title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#contact-info {
+    padding: 50px;
+    display: inline;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+#contact-form label,
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
+    font-weight: 900;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#contact-form textarea {
+    height: 200px;
+}
+
+#survey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#survey-info {
+    padding: 0 100px 0 100px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#survey-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+#survey-form label,
+#survey-form input,
+#survey-form textarea,
+#survey-form select {
+    font-weight: 900;
+
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#rating-1,
+#rating-2,
+#rating-3,
+#rating-4,
+#rating-5 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#survey-form textarea {
+    height: 100px;
+}
+
+#product-grid {
+    padding: 50px;
+    background-color: gold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.product-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.product {
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    background-color: goldenrod;
+
+}
+
+.product img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 20px 20px 0px 0px;
+
+}
+
+
+.product-info {
+    padding: 2px 16px;
+}
+
+.product-info button {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: gold;
+    border: 2px solid black;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дома - Проектна задача #1</title>
+
+    <link rel="stylesheet" type="text/css" href="./oweb_project_1.css">
+</head>
+
+<body>
+
+    <div id="navbar">
+        <div id="logo"><img alt="logo" src="./images/logo_cat.png" width="150" height="100">
+            <h1>Mach.com</h1>
+        </div>
+
+        <ul id="links">
+            <li><a href="home.html">Home</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <a href="./products_1.html">Cat Toys</a>
+                    <a href="./products_2.html">Cat Food</a>
+                    <a href="./products_3.html">Vouchers and Other</a>
+                </div>
+            </li>
+            <li><a href="survey.html">Survey</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div id="login">
+            <form id="login-form">
+                <label><b>E-mail:</b> <input type="text"></label>
+                <label><b>Password:</b> <input type="password"></label>
+                <label><a href="#">Forgot password?</a>
+                    <input type="button" value="Login"></label>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="survey">
+
+        <div id="survey-info">
+            <h1>Customer Survey</h1>
+            <p>This survey is meant to improve our services and products.<br>
+                Any valid information helps us track progress
+                and make changes.<br>
+                Completion of the survey takes about 5-10 minutes.<br>
+                Thank you for your support!
+            </p>
+        </div>
+
+        <div id="survey-form">
+            <form>
+                <h2>Customer information</h2>
+                <label>Full Name <input type="text" name="full-name"></label>
+                <label>E-mail <input type="email" name="email"></label>
+                <label>Telephone<input type="tel"></label>
+                <br><br>
+                <hr>
+                <br><br>
+                <h2>Products</h2>
+                <label>How would you rate about our Cat Toys?</label><br><br>
+                <div id="rating-1">
+
+                    <label>1</label>
+                    <input type="radio" name="rating-1" value="1" />
+                    <input type="radio" name="rating-1" value="2" />
+                    <input type="radio" name="rating-1" value="3" />
+                    <input type="radio" name="rating-1" value="4" />
+                    <input type="radio" name="rating-1" value="5" />
+                    <label>5</label>
+                </div>
+                <label>What would you improve about our Cat Toys?</label>
+                <textarea id="question-1" name="message-1"></textarea>
+
+
+                <label>How would you rate about our Cat Food?</label><br><br>
+                <div id="rating-2">
+
+                    <label>1</label>
+                    <input type="radio" name="rating-2" value="1" />
+                    <input type="radio" name="rating-2" value="2" />
+                    <input type="radio" name="rating-2" value="3" />
+                    <input type="radio" name="rating-2" value="4" />
+                    <input type="radio" name="rating-2" value="5" />
+                    <label>5</label>
+                </div>
+                <label>What would you improve about our Cat Food?</label>
+                <textarea id="question-2" name="message-2"></textarea>
+
+                <label>How would you rate about our Vouchers and Other Services?</label><br><br>
+                <div id="rating-3">
+
+                    <label>1</label>
+                    <input type="radio" name="rating-3" value="1" />
+                    <input type="radio" name="rating-3" value="2" />
+                    <input type="radio" name="rating-3" value="3" />
+                    <input type="radio" name="rating-3" value="4" />
+                    <input type="radio" name="rating-3" value="5" />
+                    <label>5</label>
+                </div>
+                <label>What would you improve about our Vouchers and Other Services?</label>
+                <textarea id="question-3" name="message-3"></textarea>
+                <br><br>
+                <hr>
+                <br><br>
+                <h2>Customer Service and Website</h2>
+                <label>How would you rate the quality of our Customer Service?</label><br><br>
+                <div id="rating-4">
+
+                    <label>1</label>
+                    <input type="radio" name="rating-4" value="1" />
+                    <input type="radio" name="rating-4" value="2" />
+                    <input type="radio" name="rating-4" value="3" />
+                    <input type="radio" name="rating-4" value="4" />
+                    <input type="radio" name="rating-4" value="5" />
+                    <label>5</label>
+                </div>
+                <label>What would you improve about our Customer Service?</label>
+                <textarea id="question-4" name="message-4"></textarea>
+
+
+                <label>How would you rate the quality of our Website?</label><br><br>
+                <div id="rating-5">
+
+                    <label>1</label>
+                    <input type="radio" name="rating-5" value="1" />
+                    <input type="radio" name="rating-5" value="2" />
+                    <input type="radio" name="rating-5" value="3" />
+                    <input type="radio" name="rating-5" value="4" />
+                    <input type="radio" name="rating-5" value="5" />
+                    <label>5</label>
+                </div>
+                <label>What would you improve about our Website?</label>
+                <textarea id="question-5" name="message-5"></textarea>
+
+                <input type="submit" value="Send">
+
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            <h3>Want to help improve our services?</h3>
+            <a href="survey.html">Take a survey</a>
+        </div>
+        <div>
+            <span><b>&copy Georgi Kamchevski 186/2017</b></span>
+        </div>
+        <div>
+            <h3>Need to contact us?</h3>
+            <a href="contact.html">Contact info</a>
+        </div>
+    </div>
+</body>
+
+</html>
