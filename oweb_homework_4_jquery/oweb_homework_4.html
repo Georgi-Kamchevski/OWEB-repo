@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<!--Истиот код е од линкот, преработен само-->
+
+<head>
+    <title>Основи на WEB програмирање - Домашна задача #4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //за првиот филтер myInput1 се користи children(':first') односно во редицата tr земи го текстот од првите деца (<td> со името) и спореди го со внесениот стринг
+            $("#myInput1").on("keyup", function () { //стави event listener за keyup event на елементот myInput, и при случување на тој event, повикај ја function во продолжение
+                var value = $(this).val().toLowerCase(); //променливата value ја зема вредноста од внесената содржина (input) на овој елемент(this означува на #myInput, елементот за кој важи event handler функцијата), и истата стави ја во lowercase за да биде case-insensitive проверката (не е важно како е внесена содржината за пребарување)
+                $("#myTable tr").filter(function () {//за редиците <tr> на табелата каде е содржината за филтрирање/пребарување, повикај ја filter функцијата, и стави да филтира според функцијата во аргументот
+                    $(this).toggle($(this).children(':first').text().toLowerCase().indexOf(value) > -1); //за овој (this) елемент (се однесува на табелата, затоа што методот важи за неа), (toggle)-смени ја состојбата за покажување на редицата, така што проверуваш дали содржината на редицата (текстот исто така сведен на мали букви за еднаква споредба) го содржи стрингот за пребаруање во value (преку indexOf методот што означува што враќа позициајта на појавување на стрингот value во стрингот го повикува методот ), се проверува дали таа вредност е поголема од -1, што би вратило точно ако има појавување каде било од почетокот на содржината. и солгасно тоа враќа true/false за дали да ја сокрие или покаже редицата.
+                });
+            });
+
+            //за вториот филтер myInput2 се користи children(':nth-child(2)') односно во редицата tr земи го текстот од вторите деца (<td> со презимето е второто дете на секое редица) и спореди го со внесениот стринг
+            $("#myInput2").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).children(':nth-child(2)').text().toLowerCase().indexOf(value) > -1); //за овој (this) елемент (се однесува на табелата, затоа што методот важи за неа), (toggle)-смени ја состојбата за покажување на редицата, така што проверуваш дали содржината на редицата (текстот исто така сведен на мали букви за еднаква споредба) го содржи стрингот за пребаруање во value (преку indexOf методот што означува што враќа позициајта на појавување на стрингот value во стрингот го повикува методот ), се проверува дали таа вредност е поголема од -1, што би вратило точно ако има појавување каде било од почетокот на содржината. и солгасно тоа враќа true/false за дали да ја сокрие или покаже редицата.
+                });
+            });
+
+            //за третиот филтер myInput3 се користи children(':last') односно во редицата tr земи го текстот од последните деца (<td> со мејл адресата е последното дете на секое редица) и спореди го со внесениот стринг
+            $("#myInput3").on("keyup", function () {
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).children(':last').text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Filterable Table Extended</h2>
+    <p>Type something in the input fields to search the table for first names, last names or emails:</p>
+    <input id="myInput1" type="text" placeholder="Search by Firstname..">
+    <input id="myInput2" type="text" placeholder="Search by Lastname ..">
+    <input id="myInput3" type="text" placeholder="Search by Email..">
+    <br><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@mail.com</td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@greatstuff.com</td>
+            </tr>
+            <tr>
+                <td>Anja</td>
+                <td>Ravendale</td>
+                <td>a_r@test.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+
+</body>
+
+</html>
