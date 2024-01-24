@@ -1,0 +1,11 @@
+<div [ngStyle]="{'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center', 'height.vh':100}"
+  style="background:linear-gradient(black,red);">
+  <app-driver *ngFor="let vzc of vozaci;
+index as i;
+first as prv;
+last as posleden;
+odd as par;
+even as nepar" [class.prv]="prv" [class.posleden]="posleden" [class.par]="par" [vozac]="vzc" [reden]="i+1"
+    (cuci)="appKlik($event)">
+  </app-driver>
+</div>

@@ -1,0 +1,23 @@
+<div [ngClass]="klasi()"
+  [ngStyle]="{'background-color':backgroundsCheck(),'width.px':cardWidth,'height.px':cardHeight,'margin.px':20,'display':'flex','flex-direction':'column','justify-content':'space-around','align-items':'center'}">
+  <ng-template #noImg>
+    <p style="color:red"><b>NEMA VOZAC</b></p>
+  </ng-template>
+  <div class="course-title">
+    {{reden +'. '+vozac.name}}
+  </div>
+  <img [src]="vozac.iconUrl" *ngIf="vozac.iconUrl; else noImg" [ngStyle]="{'width.px':cardWidth-100}">
+  <div class="course-description">
+    {{vozac.team}}
+  </div>
+  <div class="course-category" [ngSwitch]="vozac.category">
+    <div class="category" *ngSwitchCase="'Beginner'">Beginner</div>
+    <div class="category" *ngSwitchCase="'Intermediate'">Intermediate</div>
+    <div class="category" *ngSwitchCase="'Advanced'">Advanced</div>
+    <div class="category" *ngSwitchDefault="">Ne znam sho e</div>
+  </div>
+  <div>
+    Points:{{vozac.points}}
+  </div>
+  <!-- <button (click)="klik()">Klikni me be</button> -->
+</div>
